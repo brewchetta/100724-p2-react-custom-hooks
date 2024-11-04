@@ -1,10 +1,28 @@
 {
-    "animals": [
-        {
-            "id": "1",
-            "name": "Bob the raccoon",
-            "image": "https://www.cedarhilltx.com/ImageRepository/Document?documentID=38200",
-            "likes": 3
-        }
-    ]
+  "animals": [
+    {
+      "id": "1",
+      "name": "Bob the raccoon",
+      "image": "https://www.cedarhilltx.com/ImageRepository/Document?documentID=38200",
+      "likes": 18
+    },
+    {
+      "id": "469b",
+      "name": "Leroy",
+      "image": "https://www.thesafaricollection.com/wp-content/uploads/2022/07/The-Safari-Collection-Hey-You-Giraffe-Manor-1.jpg",
+      "likes": 1
+    },
+    {
+      "id": "8130",
+      "name": "Loris",
+      "image": "https://d1jyxxz9imt9yb.cloudfront.net/medialib/4673/image/s768x1300/AdobeStock_457246710_543260_reduced.jpg",
+      "likes": 0
+    },
+    {
+      "id": "8bb4",
+      "name": "Auto",
+      "image": "https://www.treehugger.com/thmb/iayN8kOoAdb190hXrlG9KdZEb8Q=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__mnn__images__2015__09__river-otters-lead-photo-86eef01e35714da9a6dd974f321e3504.jpg",
+      "likes": 0
+    }
+  ]
 }
