@@ -1,16 +1,10 @@
-# React Advanced Fetch
+# React useContext & Custom Hooks
 
 ## Learning Goals
 
-- POST, PATCH, DELETE requests
+- useContext hook
 
-- useEffect
-
-- Spread operator as a form of adding elements
-
-- Mapping as a form of editing elements
-
-- Filtering as a form of deleting elements
+- building custom hooks
 
 ## Getting Started
 
