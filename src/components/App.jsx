@@ -1,28 +1,25 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, createContext } from 'react'
 import AnimalsContainer from "./Animals/AnimalsContainer"
+import useFetchAnimals from '../hooks/useFetchAnimals'
+
+// make the context OUTSIDE the component
+export const PettingZooContext = createContext(null)
 
 function App() {
 
-  const [animals, setAnimals] = useState([])
+  const [animals, setAnimals] = useFetchAnimals('http://localhost:3000/animals')
 
   const [pettingZooOpen, setPettingZooOpen] = useState(true)
-
-  async function getAnimals() {
-    const response = await fetch('http://localhost:3000/animals')
-    const animalData = await response.json()
-    setAnimals(animalData)
-  }
-  
-  useEffect(() => {
-    getAnimals()
-  }, [])
 
   const togglePettingZoo = () => setPettingZooOpen(prevState => !prevState)
 
   return (
     <div className="App">
 
-      <AnimalsContainer animals={animals} />
+      {/* create the provider and give it a value - in this case an object */}
+      <PettingZooContext.Provider value={{ isOpen: pettingZooOpen, setOpen: setPettingZooOpen }}>
+        <AnimalsContainer animals={animals} />
+      </PettingZooContext.Provider>
 
       <button onClick={togglePettingZoo}>
         {pettingZooOpen ? 'Close' : 'Open'} Petting Zoo

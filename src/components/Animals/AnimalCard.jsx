@@ -1,8 +1,17 @@
 import chitter from "../../assets/chitter.mp3"
+import { PettingZooContext } from "../App"
+import { useContext } from "react"
 
 function AnimalCard({ animal }) {
 
-    const handlePetAnimal = () => new Audio(chitter).play()
+    // grab the context using the useContext
+    // we're using destructuring to grab each key in the context object
+    const {isOpen, setOpen} = useContext(PettingZooContext)
+
+    const handlePetAnimal = () => {
+        new Audio(chitter).play()
+        setOpen(false)
+    }
 
     return (
         <div className="card">
@@ -13,7 +22,7 @@ function AnimalCard({ animal }) {
             <button>Likes: {animal.likes}</button>
 
             {
-                false /* this will be replaced by pettingZooOpen */
+                isOpen
                 ?
                 <button onClick={handlePetAnimal}>Pet {animal.name}</button>
                 :
