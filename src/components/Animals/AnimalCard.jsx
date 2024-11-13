@@ -1,4 +1,4 @@
-import chitter from "../assets/chitter.mp3"
+import chitter from "../../assets/chitter.mp3"
 
 function AnimalCard({ animal }) {
 
